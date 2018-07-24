@@ -1,0 +1,20 @@
+<div class="row">
+	<form #login="ngForm" (ngSubmit)="onSubmit(login)" class="col l12">
+		<div class="row">
+			<div class="input-field col l6">
+				<input id="usuario" type="text" name="usuario" ngModel required #usuario="ngModel">
+				<label for="usuario">Usuário</label>
+			</div>
+			<div class="input-field col l6">
+				<input id="senha" type="password" name="senha" ngModel required #senha="ngModel">
+				<label for="senha">Senha</label>
+			</div>
+		</div>
+		<div class="error" *ngIf="(usuario.invalid && usuario.touched) || (senha.invalid && senha.touched)">
+			<p class="center-align">Campo(s) obrigatório(s).</p>
+		</div>
+		<div class="row center-align" style="margin-top: 20px;">
+			<button class="waves-effect waves-light btn" type="submit">LOGIN</button>
+		</div>
+	</form>
+</div>
