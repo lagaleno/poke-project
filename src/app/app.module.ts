@@ -12,8 +12,8 @@ import { AppRoutingModule } from './app.routing.module'
 import { HttpClientModule } from '@angular/common/http'; //Importar para a service funcionar
 import { PokemonService } from './services/pokemon/pokemon.service'; //Importar para a service funcionar
 
-import { GinasioComponent } from './pages/ginasio/ginasio.component';
-import { FormsModule } from '@angular/forms'; //Importar para ngForm funcionar
+import { FormsModule } from '@angular/forms';
+import { TrainerComponent } from './pages/trainer/trainer.component'; //Importar para ngForm funcionar
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms'; //Importar para ngForm funcionar
     PokemonsComponent,
     HomeComponent,
     BerriesComponent,
-    GinasioComponent,
+    TrainerComponent,
   ],
   imports: [
     BrowserModule,
