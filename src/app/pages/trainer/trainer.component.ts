@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TrainerService } from '../../services/trainer/trainer.service';
+
 @Component({
   selector: 'app-trainer',
   templateUrl: './trainer.component.html',
@@ -7,23 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainerComponent implements OnInit {
 
-	passwordError: boolean = false;
-
-  constructor() { }
+  constructor(public trainerService: TrainerService) { }
 
   ngOnInit() {
   }
 
-  onSubmit(login) {
-  	console.log(login);
-  }
-
-  checkPassword(senha) {
-  	console.log(this.passwordError);
-  	if(senha.value.length != 6)
-  		this.passwordError = true;
-  	else
-  		this.passwordError = false;
+  onSubmit(trainer) {
+  	this.trainerService.createTrainer(trainer.value).subscribe(
+  		(res) => {
+  			console.log(res);
+  		});
   }
 
 }

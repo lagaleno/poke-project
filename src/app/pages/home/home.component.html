@@ -12,3 +12,15 @@
 		</div>
 	</div>
 </div>
+
+<div class="container">
+	<ul class="collection">
+	    <li class="collection-item" *ngFor="let trainer of trainers; let i = index">
+	      <span class="title">{{trainer.nome}}</span>
+	      <p>{{trainer.codigo}} <br>
+	         {{trainer.pokemon}}
+	      </p>
+	      <a class="secondary-content waves-effect waves-light red darken-4 btn" (click)="delete(i)">Apagar</a>
+	    </li>
+	</ul>
+</div>

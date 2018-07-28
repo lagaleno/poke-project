@@ -14,6 +14,7 @@ import { PokemonService } from './services/pokemon/pokemon.service'; //Importar 
 
 import { FormsModule } from '@angular/forms';
 import { TrainerComponent } from './pages/trainer/trainer.component'; //Importar para ngForm funcionar
+import { TrainerService } from './services/trainer/trainer.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TrainerComponent } from './pages/trainer/trainer.component'; //Importar
     FormsModule
   ],
   providers: [
-    PokemonService
+    PokemonService,
+    TrainerService
   ],
   bootstrap: [AppComponent]
 })
