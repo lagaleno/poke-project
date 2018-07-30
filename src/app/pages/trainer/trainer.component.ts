@@ -15,10 +15,9 @@ export class TrainerComponent implements OnInit {
   }
 
   onSubmit(trainer) {
-  	this.trainerService.createTrainer(trainer.value).subscribe(
+  	this.trainerService.createTrainer(trainer.value.name, trainer.value.pokemon, trainer.value.id).subscribe(
   		(res) => {
   			console.log(res);
   		});
   }
-
 }

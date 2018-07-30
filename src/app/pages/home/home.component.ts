@@ -16,11 +16,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   	this.trainerService.getTrainer().subscribe(
   		(res) => {
-  			for(let i = 0; i < res.length; i++)
-  				this.trainers.push(res);
-  		},
-  		(error) => {
-  			console.log("Oi, eu dei um erro");
+  			for(let i = 0; i < res.data.length; i++)
+  				this.trainers.push(res.data[i]);
   		}
   	);
   }
