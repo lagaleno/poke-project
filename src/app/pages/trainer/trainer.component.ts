@@ -18,12 +18,4 @@ export class TrainerComponent implements OnInit {
   	console.log(login);
   }
 
-  checkPassword(senha) {
-  	console.log(this.passwordError);
-  	if(senha.value.length != 6)
-  		this.passwordError = true;
-  	else
-  		this.passwordError = false;
-  }
-
 }
